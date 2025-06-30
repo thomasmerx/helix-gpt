@@ -36,8 +36,8 @@ export default class Github extends ApiBase {
     ];
 
     const body = {
-      max_tokens: 7909,
-      model: "gpt-4",
+      max_tokens: parseInt(config.openaiMaxTokens as string),
+      model: config.openaiModel,
       n: 1,
       stream: false,
       temperature: 0.1,
